@@ -18,6 +18,7 @@
 'use strict';
 
 var compactTestView = (function() {
+
   function CompactTestView(fields, style) {
     var self = this;
     this.divId = 'testview';
