@@ -185,7 +185,7 @@ var PlaybackperfTest = function(subgroup, suite) {
             perfTestUtil.assertAtLeastOneFrameDecoded();
             var totalDroppedFrames = perfTestUtil.getTotalDroppedFrames();
 
-            test.prototype.decoded_frames = perfTestUtil.getTotalDecodedVideoFrames();
+            test.prototype.decoded_frames = perfTestUtil.getTotalDecodedFrames();
             test.prototype.dropped_frames = totalDroppedFrames;
 
             if (totalDroppedFrames > 2) {
@@ -253,7 +253,7 @@ var PlaybackperfTest = function(subgroup, suite) {
           video.removeEventListener('timeupdate', onTimeUpdate);
           video.pause();
 
-          test.prototype.decoded_frames = perfTestUtil.getTotalDecodedVideoFrames();
+          test.prototype.decoded_frames = perfTestUtil.getTotalDecodedFrames();
           test.prototype.dropped_frames = perfTestUtil.getTotalDroppedFrames();
 
           if (video.playbackRate != playbackRate) {
